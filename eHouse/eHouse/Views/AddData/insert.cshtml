@@ -1,0 +1,36 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model eHouse.Models.RentModel
+<form method="post">
+    <label asp-for="tittle"></label>
+    <input asp-for="tittle" />
+    <label asp-for="descrip"></label>
+    <input asp-for="descrip" />
+    <label asp-for="areaUnit"></label>
+    <input asp-for="areaUnit" />
+    <label asp-for="area"></label>
+    <input asp-for="area" />
+    <label asp-for="province"></label>
+    <input asp-for="province" />
+    <label asp-for="city"></label>
+    <input asp-for="city" />
+    <label asp-for="stadress"></label>
+    <input asp-for="stadress" />
+    <label asp-for="price"></label>
+    <input asp-for="price" />
+
+    <input type="submit" value="Add" />
+@{
+    if (TempData["msg"]!=null)
+    {
+        <script>
+              alert('@TempData["msg"]')
+        </script>
+    }
+}
+
+
+</form>
